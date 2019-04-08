@@ -73,6 +73,8 @@ From inside the respository directory, run the following command:
 cucumber
 ````
 
+Output and results will follow.
+
 ## Built With
 
 * [Capybara](https://github.com/teamcapybara/capybara) - Web-based test automation software that simulates scenarios for user stories and automates web application testing for behavior-driven software development.
