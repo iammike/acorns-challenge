@@ -52,8 +52,7 @@ Perform the following steps from your terminal of choice:
     gem install bundler
     ````
     
-1. From a directory of your choice, clone [the repository](https://github.com/iammike/). Following this step, all subsequent 
-steps should be performed from inside this cloned directory:
+1. From a directory of your choice (a base level for Git repositories, clone [the repository](https://github.com/iammike/). Following this step, all subsequent steps should be performed from inside this cloned directory (./acorns-challenge):
 
     ````
     git clone [replace brackets and bracketed text with value provided by 'Clone or Download' button in link above']
