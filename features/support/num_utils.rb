@@ -2,6 +2,7 @@ class NumUtils
 
   def self.convert_abbr_to_full(value)
     abbr = value[-1]
+
     case abbr
     when 'k'
       suffix = '000'
@@ -12,7 +13,7 @@ class NumUtils
   end
 
   def self.remove_money_symbols(value)
-    value.delete '$,'
+    value.delete('$,')
   end
 
 end

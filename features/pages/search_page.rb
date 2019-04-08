@@ -10,6 +10,7 @@ class SearchPage < SitePrism::Page
       expected_value = NumUtils.convert_abbr_to_full(expected_value)
       expected_value = NumUtils.remove_money_symbols(expected_value).to_i
     end
+
     @homes_data.each do |stats|
       if type.include?('Price')
         value = stats[/(\S*)/]
@@ -90,8 +91,7 @@ class SearchPage < SitePrism::Page
 
   def set_baths(target_baths)
     elem_baths_value = find('#filterContent > div > div:nth-child(1) > div.doubleRow > div:nth-child(2) > div.filterRow > span > span > span.input > span > span')
-
-    target_baths = target_baths.chop.to_i
+    target_baths = target_baths.chop.to_i # Remove + sign
     current_baths_value = (elem_baths_value.text == 'No min') ? 0 : elem_baths_value.text.chop
 
     if current_baths_value < target_baths
@@ -108,6 +108,7 @@ class SearchPage < SitePrism::Page
   def change_baths_value(action, steps)
     action = (action == 'increase') ? 'up' : 'down'
     elem_button = find("#filterContent > div > div:nth-child(1) > div.doubleRow > div:nth-child(2) > div.filterRow > span > span > span.step-#{action}")
+
     steps.times do
       elem_button.click
     end
