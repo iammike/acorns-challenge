@@ -68,9 +68,9 @@ Perform the following steps from your terminal of choice:
 
 From inside the respository directory, run the following command:
 
-    ````
-    cucumber
-    ````
+````
+cucumber
+````
     
 Output and results will follow.
 
