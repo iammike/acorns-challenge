@@ -4,6 +4,7 @@ require 'capybara/rspec'
 require 'site_prism'
 require 'webdrivers'
 require 'pry'
+require 'csv'
 
 raw_chrome_browser_version = `/usr/libexec/PlistBuddy -c "print :CFBundleShortVersionString" "/Applications/Google Chrome.app/Contents/Info.plist"` # Ex: "72.0.3626.96\n"
 chrome_version = raw_chrome_browser_version.split('.')[0...-1].join('.') # Ex: "72.0.3626"
