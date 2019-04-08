@@ -15,7 +15,7 @@ class SearchPage < SitePrism::Page
     elems_home_prices = all('span.homecardV2Price')
     home_prices = elems_home_prices.map(&:text)
     home_stats = elems_home_stats.map(&:text)
-    @homes_data = home_prices.zip(home_stats).map { |a| a.join(' ') }
+    home_prices.zip(home_stats).map { |a| a.join(' ') }
   end
 
   def page_loaded?
@@ -53,13 +53,13 @@ class SearchPage < SitePrism::Page
   end
 
   def results_valid_on_screen?(type, comparison, expected_value)
-    get_all_homes_data
+    homes_data = get_all_homes_data
     if type.include?('Price')
       expected_value = NumUtils.convert_abbr_to_full(expected_value)
       expected_value = NumUtils.remove_money_symbols(expected_value).to_i
     end
 
-    @homes_data.each do |stats|
+    homes_data.each do |stats|
       if type.include?('Price')
         value = stats[/(\S*)/]
         value = NumUtils.remove_money_symbols(value).to_i
