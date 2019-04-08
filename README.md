@@ -77,7 +77,7 @@ Output and results will follow.
 ## Testing the code
 
 1. Open `features/tests/search_filter_results.feature` in your text editor or IDE of choice.
-1. Modify the values in the "Then I set" lines one at a time to something drastically different (to ensure the homes returned contain ones that will trigger failure when checking) while leaving the "And I verify" lines with their original values.
+1. Modify the values in the `Then I set` lines one at a time to something drastically different (to ensure the homes returned contain ones that will trigger failure when checking) while leaving the `And I verify` lines with their original values.
 1. [Run the code](#run-the-code)
 1. Observe a failure for the type of filter you modified
 
