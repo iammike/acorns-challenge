@@ -40,7 +40,7 @@ Perform the following steps from your terminal of choice:
     exec $SHELL -l
     ````
     
-1. Install [Ruby](https://en.wikipedia.org/wiki/Ruby_(programming_language) 2.6.0:
+1. Install [Ruby](https://en.wikipedia.org/wiki/Ruby_(programming_language)) 2.6.0:
 
     ````
     rbenv install 2.6.0
