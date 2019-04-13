@@ -21,4 +21,5 @@ end
 
 Then(/^I download the CSV Results file$/) do
   step %{I click Download}
+  sleep 5 # Give time for download to complete, otherwise you'll operate on previous file
 end
